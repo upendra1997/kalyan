@@ -60,31 +60,33 @@
 
 
 
-                    <nav id="nav" class="navbar navbar-dark navbar-expand-sm fixed-top">
-                        <a class="navbar-brand" href="#portfolio">Kalyan Yojana</a>
+                    <nav id="nav" class="navbar navbar-light" style="background-color: #D3D3D3;" navbar-expand-sm fixed-top">
+                        <a class="navbar-brand" href="/">Kalyan Yojana</a>
 	 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item"><a href="/public_views/complains/all">Public Views</a></li>
-                            <li class="nav-item"><a href="/applis_view">Application Views</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/public_views/complains/all">Public Views</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/applis_view">Application Views</a></li>
                             {% if "gov" not in request.session.keys %}
-                            <li class="nav-item"><a href="/scomplain">Complain | Suggest</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/scomplain">Complain | Suggest</a></li>
                             {% endif %}
-                            <li class="nav-item"><a href="/Services/0">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Services/0">Services</a></li>
                             {% if "id" not in request.session.keys %}
-                            <li class="nav-item"><a href="/register">Register</a></li>
-                            <li class="nav-item"><a href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                             {% endif %}
                             {% if "id" in request.session.keys and "gov" not in request.session.keys %}
 
-                            <li class="nav-item"><a href="/profile/{{request.session.id}}">Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/profile/{{request.session.id}}">Profile</a></li>
                             {% endif %}
-                            <li class="nav-item"><a href="/about">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                             {% if "id" in request.session.keys %}
-                            <li class="nav-item"><a href="/logout">LogOut</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout">LogOut</a></li>
                             {% endif %}
                     </ul>
+                    </div>
                 </nav>
 
                <!--  <div>
